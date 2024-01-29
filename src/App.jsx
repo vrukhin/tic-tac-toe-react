@@ -37,7 +37,7 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-      <div>{status}</div>
+      <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -93,7 +93,7 @@ export default function Game() {
   });
 
   return (
-    <div className="Game">
+    <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
       </div>
